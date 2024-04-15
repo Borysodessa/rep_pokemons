@@ -1,18 +1,11 @@
-import { useState } from "react";
 import styles from "./Pokemon.module.css";
 
-export function Pokemon({ name, id, idx }) {
-  const [caught, setCaugth] = useState();
-
+export function Pokemon({ name, id, caught, handleClick }) {
   const url =
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
-    idx +
+    id +
     ".png";
 
-  function handleClick() {
-    setCaugth(!caught);
-  }
-  console.log(id);
   const style = {
     backgroundColor: caught ? "red" : "green",
   };
@@ -21,7 +14,7 @@ export function Pokemon({ name, id, idx }) {
     <div
       className={styles.colorWrap}
       style={style}
-      onClick={() => handleClick()}
+      onClick={() => handleClick(id)}
     >
       <h2 className={styles.name}>{name}</h2>
       <img className={styles.img} src={url} alt="pokemon_image" />

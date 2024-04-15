@@ -125,15 +125,11 @@
     z-index: 50;
 }
 
-.quantityPokemons {
-    width: 40px;
-    text-align: center;
-    border: 1px solid black;
+.counterTitle{
+    margin-left:20%;
+    margin-bottom: 0;
+    color:#ffffff;
 }
 
-.pagination {
 
-    margin-left: auto;
-    margin-right: auto;
-    width: 150px;
-}
+
